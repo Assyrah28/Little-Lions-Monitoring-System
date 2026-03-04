@@ -254,10 +254,16 @@ const Sidebar = ({
         <div className="sidebar__profile">
           <div className="sidebar__avatar">
             {currentUser?.profilePhoto ? (
-              <img 
-                src={currentUser.profilePhoto} 
-                alt="Profile" 
-                style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }} 
+              <img
+                src={currentUser.profilePhoto}
+                alt="Profile"
+                style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }}
+              />
+            ) : typeof avatar === 'string' && (avatar.startsWith('/') || avatar.startsWith('http') || avatar.startsWith('data:')) ? (
+              <img
+                src={avatar}
+                alt="Avatar"
+                style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }}
               />
             ) : (
               avatar

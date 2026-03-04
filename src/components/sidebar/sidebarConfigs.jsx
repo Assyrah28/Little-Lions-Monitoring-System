@@ -9,6 +9,7 @@ import admin_Icon from "../../images/admin-icon.svg";
 import teacher_Icon from "../../images/teacher-icon.svg";
 import therapist_Icon from "../../images/therapist-icon/therapist1.svg";
 import parent_Icon from "../../images/parent-icon.svg";
+import logoImg from "../../images/logo.webp";
 
 // SVG Icons as React elements
 const HomeIcon = (
@@ -91,7 +92,7 @@ const CalendarIcon = (
 export const getAdminConfig = (isSuperAdmin = false) => ({
   role: "admin",
   roleLabel: isSuperAdmin ? "SUPER ADMIN" : "ADMINISTRATOR",
-  avatar: "🦁",
+  avatar: logoImg,
   menuSections: [
     {
       title: "MAIN",
