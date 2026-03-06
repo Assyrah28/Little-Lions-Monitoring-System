@@ -6,6 +6,8 @@
 .modal-overlay:has(.assessment-history-modal) {
   align-items: flex-start;
   padding-top: 20px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 /* Modal container styling */
