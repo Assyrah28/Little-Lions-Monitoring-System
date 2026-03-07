@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 import { useToast } from '../../context/ToastContext';
 import Loading from '../../components/common/Loading';
-import BackButton from '../../components/common/BackButton';
 import Sidebar from '../../components/sidebar/Sidebar';
 import { getTherapistConfig } from '../../components/sidebar/sidebarConfigs';
 
@@ -728,7 +727,16 @@ const TherapistProfile = () => {
             <section className="tp-profile-header-section">
               {/* Header Bar */}
               <div className="tp-profile-header-bar">
-                <BackButton />
+                <button
+                  className="tp-back-btn"
+                  onClick={handleBack}
+                  aria-label="Go back"
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12" />
+                    <polyline points="12 19 5 12 12 5" />
+                  </svg>
+                </button>
                 <div className="tp-header-text">
                   <h1 className="tp-header-title-text">MY PROFILE</h1>
                   <p className="tp-header-subtitle-text">View and manage your professional information</p>
